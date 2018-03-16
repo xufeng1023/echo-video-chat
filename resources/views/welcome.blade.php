@@ -21,9 +21,21 @@
             @endif
 
             <div class="content">
-                <chat-room :conversation="{{ $conversation }}" :current-user="{{ auth()->user() }}"></chat-room>
+                
             </div>
         </div>
         <script src="{{ asset('js/app.js') }}"></script>
+        <script>
+            Echo.join('chat-room-1')
+                .here((users) => {
+                    //
+                })
+                .joining((user) => {
+                    console.log(user.name + ' is joining');
+                })
+                .leaving((user) => {
+                    console.log(user.name + ' is leaving');
+                });
+        </script>
     </body>
 </html>
