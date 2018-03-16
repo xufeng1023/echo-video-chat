@@ -5,7 +5,7 @@ use PhpJunior\LaravelVideoChat\Facades\Chat;
 
 Route::get('/', function () {
 	//event(new UserSignedUp);
-	$conversation = Chat::getConversationMessageById(1);
+	$conversation = Chat::getConversationMessageById(10);
     return view('welcome', compact('conversation'));
     //return view('welcome');
 });

@@ -55955,14 +55955,13 @@ var candidateDidReceived = false;
         listenForNewMessage: function listenForNewMessage() {
             var _this2 = this;
 
-            // Echo.join(this.channel)
-            //     .here((users) => {
-            //         console.log(users)
-            //     })
-            //     .joining((user) => {
-            //         console.log(user.name + ' is joining.');
-            //     })
-            Echo.private(this.channel).listen('\\PhpJunior\\LaravelVideoChat\\Events\\NewConversationMessage', function (data) {
+            Echo.join(this.channel).here(function (users) {
+                console.log(users);
+            }).joining(function (user) {
+                console.log(user.name + ' is joining.');
+            })
+            //Echo.private(this.channel)
+            .listen('\\PhpJunior\\LaravelVideoChat\\Events\\NewConversationMessage', function (data) {
                 var self = _this2;
                 if (data.files.length > 0) {
                     $.each(data.files, function (key, value) {
@@ -56087,7 +56086,6 @@ function gotStream(stream) {
 function start() {
 
     trace('Requesting local stream');
-
     navigator.mediaDevices.getUserMedia({
         audio: true,
         video: {
