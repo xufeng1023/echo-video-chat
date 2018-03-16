@@ -26,16 +26,7 @@
         </div>
         <script src="{{ asset('js/app.js') }}"></script>
         <script>
-            Echo.join('chat-room-1')
-                .here((users) => {
-                    //
-                })
-                .joining((user) => {
-                    console.log(user.name + ' is joining');
-                })
-                .leaving((user) => {
-                    console.log(user.name + ' is leaving');
-                });
+            Echo.private('chat-room-1')
         </script>
     </body>
 </html>

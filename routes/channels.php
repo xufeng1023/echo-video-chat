@@ -13,6 +13,6 @@
 
 Broadcast::channel('chat-room-{id}', function ($user, $id) {
     //if((int) $user->id === (int) $id) {
-    	return ['name' => $user->name];
+    	return true;//['name' => $user->name];
     //}
 });
