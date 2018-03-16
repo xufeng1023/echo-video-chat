@@ -26,7 +26,10 @@
         </div>
         <script src="{{ asset('js/app.js') }}"></script>
         <script>
-            Echo.private('chat-room-1')
+            Echo.channel('chat-room-1')
+                .listen('UserSignedUp', (e) => {
+                    console.log(1);
+                })
         </script>
     </body>
 </html>

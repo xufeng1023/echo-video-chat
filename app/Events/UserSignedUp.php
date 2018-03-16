@@ -31,6 +31,6 @@ class UserSignedUp implements ShouldBroadcast
      */
     public function broadcastOn()
     { 
-        return new PresenceChannel('user-signup-6');
+        return new Channel('chat-room-1');
     }
 }
