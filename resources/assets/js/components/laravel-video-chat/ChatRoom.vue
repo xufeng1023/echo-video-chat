@@ -161,13 +161,14 @@
                 axios.post('/chat/message/send/file', data);
             },
             listenForNewMessage: function () {
-                Echo.join(this.channel)
-                    .here((users) => {
-                        console.log(users)
-                    })
-                    .joining((user) => {
-                        console.log(user.name + ' is joining.');
-                    })
+                // Echo.join(this.channel)
+                //     .here((users) => {
+                //         console.log(users)
+                //     })
+                //     .joining((user) => {
+                //         console.log(user.name + ' is joining.');
+                //     })
+                Echo.private(this.channel)
                     .listen('\\PhpJunior\\LaravelVideoChat\\Events\\NewConversationMessage', (data) => {
                         var self = this;
                         if ( data.files.length > 0 ){
