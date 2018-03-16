@@ -4,10 +4,10 @@ use App\Events\UserSignedUp;
 use PhpJunior\LaravelVideoChat\Facades\Chat;
 
 Route::get('/', function () {
-	event(new UserSignedUp);
-	//$conversation = Chat::getConversationMessageById(1);
-    //return view('welcome', compact('conversation'));
-    return view('welcome');
+	//event(new UserSignedUp);
+	$conversation = Chat::getConversationMessageById(1);
+    return view('welcome', compact('conversation'));
+    //return view('welcome');
 });
 
 Auth::routes();
