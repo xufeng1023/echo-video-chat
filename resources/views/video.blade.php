@@ -24,6 +24,7 @@
                 <video></video>
             </div>
         </div>
+        <script src="{{ asset('js/app.js') }}"></script>
         <script>
             // Older browsers might not implement mediaDevices at all, so we set an empty object first
 if (navigator.mediaDevices === undefined) {
