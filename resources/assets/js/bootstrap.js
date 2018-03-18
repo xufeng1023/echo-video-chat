@@ -45,6 +45,7 @@ if (token) {
  */
 
 import Echo from "laravel-echo"
+import adapter from "webrtc-adapter"
 
 window.io = require('socket.io-client');
 window.Cookies = require('js-cookie');
