@@ -63,6 +63,7 @@ navigator.mediaDevices.getUserMedia({ audio: true, video: { facingMode: "user" }
     // Avoid using this in new browsers, as it is going away.
     video.src = window.URL.createObjectURL(stream);
   }
+  video.play();
   video.onloadedmetadata = function(e) {
     video.play();
   };
