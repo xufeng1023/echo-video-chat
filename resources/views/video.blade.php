@@ -25,7 +25,7 @@
             </div>
         </div>
         <script>
-            var constraints = { audio: true, video: { width: 1280, height: 720 } }; 
+            var constraints = { audio: true, video: {width: 350, height: 400} }; 
 
             navigator.mediaDevices.getUserMedia(constraints)
             .then(function(mediaStream) {
