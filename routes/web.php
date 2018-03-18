@@ -10,6 +10,10 @@ Route::get('/', function () {
     //return view('welcome');
 });
 
+Route::get('/video', function() {
+	return view('video');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
