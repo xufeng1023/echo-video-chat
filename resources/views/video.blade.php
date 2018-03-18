@@ -52,7 +52,7 @@ if (navigator.mediaDevices.getUserMedia === undefined) {
   }
 }
 
-navigator.mediaDevices.getUserMedia({ audio: true, video: true })
+navigator.mediaDevices.getUserMedia({ audio: true, video: { facingMode: "user" } })
 .then(function(stream) {
   var video = document.querySelector('video');
   // Older browsers may not have srcObject
